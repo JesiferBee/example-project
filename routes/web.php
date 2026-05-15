@@ -1,0 +1,39 @@
+<?php
+
+use App\Http\Controllers\PageController;
+use App\Http\Controllers\ProfileController;
+use Illuminate\Support\Facades\Route;
+
+// Route::get('/', function () {
+//     $title = 'Welcome to My Website';
+//     $name = 'Lyhong Taing';
+//     $major = 'CS';
+//     $uni = 'Life University';
+//     return view('welcome', compact('title', 'name', 'major', 'uni'));
+// });
+
+
+// Route::get('/about', function () {
+//     $aboutTitle = 'About Us';
+//     return view('about', compact('aboutTitle'));
+// });
+
+// Route::get('/contact', function () {
+//     $contact = 'My Contact';
+//     return view('contact', compact('contact'));
+// });
+
+// Route::get('/services', function () {
+//     $serv = 'Our Services';
+//     $info = 'Contact us with lyhong@lifeun.edu.kh';
+//     return view('services', compact('serv', 'info'));
+// });
+
+
+Route::get('/', [PageController::class, 'welcome']);
+Route::get('/about', [PageController::class, 'about']);
+Route::get('/contact', [PageController::class, 'contact']);
+Route::get('/services', [PageController::class, 'services']);
+Route::get('/products', [PageController::class, 'products']);
+
+Route::get('/profile', [ProfileController::class, 'profile']);
